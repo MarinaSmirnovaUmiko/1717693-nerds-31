@@ -713,6 +713,20 @@ a {
   outline-offset: -5px;
   margin-left: 100px;
 }
+
+.layout-field {
+  display: flex;
+  justify-content: end;
+  width: 759px;
+  height: 30px;
+}
+
+.layout-field div:first-child {
+  justify-self: start;
+}
+
+
+
 .legend {
   font-weight: 700;
   font-style: bold;
@@ -756,6 +770,13 @@ a {
 .filter-list {
   list-style: none;
 }
+
+.filter-list-layout {
+  display: flex;
+  width: 272px;
+  height: 18px;
+}
+
 
 .styles input,
 .styles input:checked {
@@ -894,4 +915,28 @@ a {
 
 .semples g:hover {
   opacity: unset;
+}
+
+.page-scroll {
+  height: 50px;
+  width: 443px;
+  display: flex;
+  justify-content: start;
+}
+
+.sample {
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  
+  
+}
+
+.sample > li {
+  height: 618px;
+  width: 360px;
+  padding: 10px;
+  margin: 0 10px;
 }
