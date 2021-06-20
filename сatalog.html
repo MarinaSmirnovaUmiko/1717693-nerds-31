@@ -11,7 +11,7 @@
 
 <body class="page-body">
 
-    <header class="main-header inner-header">
+    <header class="inner-header main-header">
         <nav class="main-navigation">
             <a class="main-header-logo" href="index.html">
                 <img class="for-img" src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии Нердс">
@@ -27,7 +27,7 @@
                       <li><a href="#howtofind">Контакты</a></li>
                     </ul> 
                     <div class="cart-navigation">
-                      <a class="cart-link" href="blank.html"><img src="img/cart-icon.svg" width="15" height="11" alt="В-корзину-тык">Корзина</a>
+                      <a class="cart-link" href="blank.html">Корзина</a>
                  </div>      
              </div>
 
@@ -43,29 +43,48 @@
         
         <section class="section-left">
             
-          <h2>Фильтр товаров</h2>
+          <h2 class="visually-hidden">Фильтр товаров</h2>
           <form method="get" action="https://echo.htmlacademy.ru">
-                <fieldset class="field">
-                    <legend class="legend">Стоимость:</legend>
-                    <p class="rank"><input  type="range" min="0" max="22500" id="price"></p>
-                    <p><label for="price-fixer">ОТ</label>
-                      <input class="rank" id="price-fixer" type="number" name="num" placeholder="0"></p>
-                    <p><label for="price-fixer2">ДО</label>
-                      <input class="rank" id="price-fixer2" type="number" name="num2" placeholder="22500"></p>  
-                  </fieldset>
+            <fieldset class="filter-item">
+              <legend>Стоимость:</legend>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar" style="
+                      width: 30%;
+                      margin-left: 20%
+                    "></div>
+                  </div>
+                  <div class="toggle toggle-min" tabindex="0" style="
+                    left: 20%
+                  "></div>
+                  <div class="toggle toggle-max" tabindex="0" style="
+                    left: 50%
+                  "></div>
+                </div>
+                <div class="price-controls">
+                  <label class="min-price">
+                    от <input type="number" name="min-price" value="0">
+                  </label>
+                  <label class="max-price">
+                    до <input type="number" name="max-price" value="15000">
+                  </label>
+                </div>
+              </div>
+            </fieldset>
                   <fieldset class="field">
                     <legend class="legend">Сетка:</legend>
                     <ul class="filter-list">
-                        <li class="styles">
-                            <input type="radio" name="product-group" value="adaptive" id="filter-adaptive" checked>
+                        <li class="filter-option filter-radio styles">
+                            <input class="visually-hidden filter-input-radio filter-input" type="radio" name="product-group" value="adaptive" id="filter-adaptive" checked>
                             <label for="filter-adaptive">Адаптивная</label>
                           </li>
-                          <li class="styles">
-                            <input type="radio" name="product-group" value="fixed" id="filter-fixed">
+                          <li class="filter-option filter-radio styles">
+                            <input class="visually-hidden filter-input-radio filter-input" type="radio" name="product-group" value="fixed" id="filter-fixed">
                             <label for="filter-fixed">Фиксированная</label>
                           </li>
-                          <li class="styles">
-                            <input type="radio" name="product-group" value="rubber" id="filter-rubber">
+                          <li class="filter-option filter-radio styles">
+                            <input class="visually-hidden filter-input-radio filter-input" type="radio" name="product-group" value="rubber" id="filter-rubber">
                             <label for="filter-rubber">Резиновая</label>
                           </li>
                     </ul>
@@ -73,17 +92,17 @@
                   <fieldset class="field">
                     <legend class="legend">Особенности:</legend>
                     <ul class="filter-list">
-                      <li class="styles">
-                          <input type="checkbox" name="slider" id="filter-slider" checked>
+                      <li class="filter-option filter-checkbox styles">
+                          <input class="filter-input-checkbox filter-input visually-hidden" type="checkbox" name="slider" id="filter-slider" checked>
                          <label for="filter-slider">Слайдер</label>
                       </li>
-                      <li class="styles"><input type="checkbox" name="advantages" id="filter-advantages">
+                      <li class="filter-option filter-checkbox styles"><input class="filter-input-checkbox filter-input visually-hidden" type="checkbox" name="advantages" id="filter-advantages">
                           <label for="filter-advantages">Блок преимуществ</label></li>
-                      <li class="styles"><input type="checkbox" name="news" id="filter-news" checked>
+                      <li class="filter-option filter-checkbox styles"><input class="filter-input-checkbox filter-input visually-hidden" type="checkbox" name="news" id="filter-news" checked>
                           <label for="filter-news">Новости</label></li>
-                      <li class="styles"><input type="checkbox" name="gallery" id="filter-gallery">
+                      <li class="filter-option filter-checkbox styles"><input class="filter-input-checkbox filter-input visually-hidden" type="checkbox" name="gallery" id="filter-gallery">
                           <label for="filter-gallery">Галерея</label></li>
-                      <li class="styles"><input type="checkbox" name="cart" id="filter-cart">
+                      <li class="filter-option filter-checkbox styles"><input class="filter-input-checkbox filter-input visually-hidden" type="checkbox" name="cart" id="filter-cart">
                           <label for="filter-cart">Корзина</label></li>
                   </ul>
                 </fieldset>
@@ -93,7 +112,7 @@
               
         </section>
         <section class="section-right">
-          <h2 id="clients">Список готовых шаблонов</h2>
+          <h2 class="visually-hidden" id="clients">Список готовых шаблонов</h2>
           <form>
             <fieldset class="field layout-field">
               
@@ -129,7 +148,7 @@
           <ul class="sample">
             <li class="semples">
               <a href="product.html">
-                <h3>Седона</h3>
+                
                 <p>
                   <svg width="360" height="40" viewBox="0 0 360 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.12">
@@ -139,18 +158,21 @@
                     
                 </p>
                 <p>
-                  <img src="img/img-sedona1.jpg" width="359" height="578" alt="Информационный сайт для туристов Седона">
+                  <img src="img/img-sedona1.jpg" width="359" height="578" alt="сайт для туристов Седона">
                 </p>
               </a>
-              <p>
+              <div>
+                <h3>Седона</h3>
+                <p>Информационный сайт для туристов</p>
+                <p>
                 
-                <button class="button" type="button">9 900 ₽</button>
-              </p>
+                  <button class="button" type="button">9 900 ₽</button>
+                </p>
+              </div>  
             </li>
             <li class="semples">
               <a href="product.html">
-                <h3> PINK APP</h3>
-                <p>Продуктовый лендинг приложения для iOS и Android </p>
+                
                 <p>
                   <svg width="360" height="40" viewBox="0 0 360 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.12">
@@ -163,16 +185,18 @@
                   <img src="img/img-pink1.jpg" width="358" height="578" alt="Графическое приложение для мобильного телефона">
                 </p>
               </a>
-              <p>
+              <div>
+                <h3> PINK APP</h3>
+                <p>Продуктовый лендинг приложения для iOS и Android </p>
+                <p>
                 
-                <button class="button" type="button">9 900 ₽</button>
-              </p>
+                  <button class="button" type="button">9 900 ₽</button>
+                </p>
+              </div>  
             </li>
             <li class="semples">
               <a href="product.html">
-                <h3>BARBERSHOP</h3>
-                <p>Сайт салона красоты.<br>
-                Для мужчин, да.</p>
+                
                 <p>
                   <svg width="360" height="40" viewBox="0 0 360 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.12">
@@ -185,15 +209,19 @@
                   <img src="img/img-barbershop1.jpg" width="358" height="578" alt="Барбершоп «Бородинский»">
                 </p>
               </a>
-              <p>
+              <div>
+                <h3>BARBERSHOP</h3>
+                <p>Сайт салона красоты.<br>
+                Для мужчин, да.</p>
+                <p>
                 
-                <button class="button" type="button">Купить</button>
-              </p>
+                  <button class="button" type="button">9 900 ₽</button>
+                </p>
+              </div>  
             </li>
             <li class="semples">
               <a href="product.html">
-                <h3>MISHKA</h3>
-                <p>Интернет-магазин вязаных игрушек</p>
+                
                 <p>
                   <svg width="360" height="40" viewBox="0 0 360 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.12">
@@ -206,15 +234,18 @@
                   <img src="img/img-mishka1.jpg" width="358" height="578" alt="Милые штучки ручной работы для дома Мишка">
                 </p>
               </a>
-              <p>
+              <div>
+                <h3>MISHKA</h3>
+                <p>Интернет-магазин вязаных игрушек</p>
+                <p>
                 
-                <button class="button" type="button">9 900 ₽</button>
-              </p>
+                  <button class="button" type="button">9 900 ₽</button>
+                </p>
+              </div>  
             </li>
             <li class="semples">
               <a href="product.html">
-                <h3>А PLUS</h3>
-                <p>Лендинг курсов повышения квалификации</p>
+                
                 <p>
                   <svg width="360" height="40" viewBox="0 0 360 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.12">
@@ -227,15 +258,18 @@
                   <img src="img/img-aplus1.jpg" width="358" height="578" alt="Учебные курсы А+">
                 </p>
               </a>
-              <p>
+              <div>
+                <h3>А PLUS</h3>
+                <p>Лендинг курсов повышения квалификации</p>
+                <p>
                 
                 <button class="button" type="button">9 900 ₽</button>
-              </p>
+                </p>
+              </div>  
             </li>
             <li class="semples">
               <a href="product.html">
-                <h3>КВАСТ</h3>
-                <p>Промо-сайт производителя крафтового кваса</p>
+                
                 <p>
                   <svg width="360" height="40" viewBox="0 0 360 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.12">
@@ -248,10 +282,14 @@
                   <img src="img/img-kvast1.jpg" width="358" height="578" alt="Крафтовый квас">
                 </p>
               </a>
-              <p>
+              <div>
+                <h3>КВАСТ</h3>
+                <p>Промо-сайт производителя крафтового кваса</p>
+                <p>
                 
-                <button class="button" type="button">9 900 ₽</button>
-              </p>
+                  <button class="button" type="button">9 900 ₽</button>
+                </p>
+              </div>  
             </li>
           </ul>
           <ul class="page-scroll">
@@ -274,14 +312,21 @@
     </main>
     <footer class="main-footer">
       <section class="contacts">
-          <img class="for-img" src="img/map11.jpg" width="1440" height="416" alt="Как добраться">
-          <img class="for-img" src="img/map-marker112.jpg" width="231" height="190" alt="В точности где">
+        <div class="cont1">
+
+            <img class="for-img" src="img/map11.jpg" width="1440" height="416" alt="Как добраться">
+        </div> 
+        <div class="cont2">
+            <img class="for-img" src="img/map-marker113.png" width="231" height="190" alt="В точности где">
+        </div>  
+        <div class="cont3">  
           <h2 id="howtofind">NЁRDS DESIGN STUDIO</h2>
           <p>наб. реки Карповки,<br>
           5 лит П, Санкт-Петербург<br>
            <a class="tel" href="tel:+78005558628">+7 800 555-86-28</a>
           </p>
-          <a class="button" href="blank.html">Напишите нам</a>
+          <a class="button-cont button" href="blank.html">Напишите нам</a>
+        </div>   
       </section>
       <section class="footer-social">
         <div class="wrapper1">   
@@ -293,7 +338,7 @@
           <ul class="social">
               <li>
                   <a class="social-button" href="#">
-                      <span>Вконткате</span>
+                      <span class="visually-hidden">Вконткате</span>
                       <svg width="79" height="79" viewBox="0 0 79 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path fill-rule="evenodd" clip-rule="evenodd" d="M39.6616 0.211598C61.2692 0.211598 78.7856 17.7282 78.7856 39.336C78.7856 60.9432 61.2692 78.4597 39.6616 78.4597C18.0541 78.4597 0.537542 60.9432 0.537542 39.336C0.537542 17.7282 18.0541 0.211598 39.6616 0.211598Z" fill="white"/>
                           <path fill-rule="evenodd" clip-rule="evenodd" d="M39.6616 0.211598C61.2692 0.211598 78.7856 17.7282 78.7856 39.336C78.7856 60.9432 61.2692 78.4597 39.6616 78.4597C18.0541 78.4597 0.537542 60.9432 0.537542 39.336C0.537542 17.7282 18.0541 0.211598 39.6616 0.211598Z" fill="#E1E1E1"/>
@@ -303,7 +348,7 @@
               </li>
               <li>
                   <a class="social-button" href="#">
-                      <span>Фейсбук</span>
+                      <span class="visually-hidden">Фейсбук</span>
                       <svg width="79" height="79" viewBox="0 0 79 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path fill-rule="evenodd" clip-rule="evenodd" d="M39.6617 0.211598C61.2692 0.211598 78.7856 17.7282 78.7856 39.336C78.7856 60.9432 61.2692 78.4597 39.6617 78.4597C18.054 78.4597 0.537542 60.9432 0.537542 39.336C0.537542 17.7282 18.054 0.211598 39.6617 0.211598Z" fill="white"/>
                           <path fill-rule="evenodd" clip-rule="evenodd" d="M39.6617 0.211598C61.2692 0.211598 78.7856 17.7282 78.7856 39.336C78.7856 60.9432 61.2692 78.4597 39.6617 78.4597C18.054 78.4597 0.537542 60.9432 0.537542 39.336C0.537542 17.7282 18.054 0.211598 39.6617 0.211598Z" fill="#E1E1E1"/>
@@ -314,7 +359,7 @@
               </li>
               <li>
                   <a class="social-button" href="#">
-                      <span>Инстаграм</span>
+                      <span class="visually-hidden">Инстаграм</span>
                       <svg width="79" height="79" viewBox="0 0 79 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path fill-rule="evenodd" clip-rule="evenodd" d="M39.6617 0.211598C61.2692 0.211598 78.7856 17.7282 78.7856 39.336C78.7856 60.9432 61.2692 78.4597 39.6617 78.4597C18.054 78.4597 0.537542 60.9432 0.537542 39.336C0.537542 17.7282 18.054 0.211598 39.6617 0.211598Z" fill="white"/>
                           <path fill-rule="evenodd" clip-rule="evenodd" d="M39.6617 0.211598C61.2692 0.211598 78.7856 17.7282 78.7856 39.336C78.7856 60.9432 61.2692 78.4597 39.6617 78.4597C18.054 78.4597 0.537542 60.9432 0.537542 39.336C0.537542 17.7282 18.054 0.211598 39.6617 0.211598Z" fill="#E1E1E1"/>
