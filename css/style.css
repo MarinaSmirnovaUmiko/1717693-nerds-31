@@ -599,22 +599,42 @@
   color: var(--basic-exclusive-grey);
   background-color: var(--basic-white);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  width: 960px;
-  height: 590px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+  
+  position: fixed;
+  
+  
+}
+
+.write-us {
+  width: 761px;
+  height: 443px;
   padding-bottom: 84px;
   padding-top: 63px;
-  padding-right: 100px;
+  padding-right: 90px;
   padding-left: 100px;
-  display: grid;
-  grid-template-rows: 1fr 4fr;
-  justify-self: center
-  
+  top: 120px;
+  bottom: 180px;
+
+}
+
+.button-write-us {
+  position: absolute;
+
+
 }
 
 .write-form {
   display: grid;
   grid-template-rows: 1fr 2fr;
-  row-gap: 61px;
+  
 }
 
 .wrapper-write3 {
@@ -626,11 +646,41 @@
 .wrapper-write1 {
   display: flex;
   justify-content: space-between;
+  
 }
 
+
 .write-close {
-  width: 21px;
-  height: 21px;
+  
+  position: absolute;
+  top: 113px;
+  right: 70px;
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.write-close::before,
+.write-close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  width: 19px;
+  height: 3px;
+  background-color: var(--special-pink);
+  
+}
+
+.write-close::before {
+  transform: rotate(45deg);
+  
+}
+
+.write-close::after {
+  transform: rotate(-45deg);
 }
 
 .item-for-grid1 input {
