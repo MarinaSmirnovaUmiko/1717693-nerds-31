@@ -75,7 +75,7 @@
     outline: 5px solid rgba(0, 255, 0, 0.7);
     outline-offset: -5px;
     display: grid;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 1fr 431px;
     grid-template-columns: 1/-1;
     
   }
@@ -195,7 +195,10 @@
 
 .container {
   width: 940px;
-  margin: 0 auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 240px;
+  margin-right: 240px;
   padding: 0 10px;
 }
 
@@ -338,8 +341,14 @@
 
 .container2 {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  column-gap: 40px;
+  grid-template-columns: 651px 360px;
+  column-gap: 149px;
+
+  
+  margin-right: 140px;
+ 
+  
+  
 }
 
 
@@ -384,6 +393,7 @@
 .stat {
   outline: 5px solid rgba(0, 255, 242, 0.3);
   outline-offset: -5px;
+  
 }
 
 .stat-list {
@@ -408,6 +418,9 @@
 
 .stat-features {
   min-width: 72px;
+  display: flex;
+  flex-wrap: wrap;
+  
 }
 
 .paragraph-style2 {
@@ -429,7 +442,11 @@
   vertical-align: top;
   font-weight: 700;
 
+  
+
 }
+
+
 
 .paragraph-style4 {
   font-style: normal;
@@ -928,8 +945,7 @@ a {
   width: 940px;
   margin: 10px auto;
   padding: 0 10px;
-  outline: 5px solid rgba(47, 0, 255, 0.3);
-  outline-offset: -5px;
+  
 
 }
 
@@ -959,7 +975,8 @@ a {
   
   
   width: 260px;
-  margin: 50px auto; 
+  margin: 0 auto; 
+  margin-bottom: 50px;
  
 
 }
@@ -1045,23 +1062,28 @@ a {
 }
 
 .page-catalog {
-  outline: 5px solid rgba(255, 72, 0, 0.7);
-  outline-offset: -5px;
+  
   display: grid;
   grid-template-columns: 260px 1fr;
   align-content: start;
-  width: 1440px;
+  width: 1160px;
+  padding-left: 140px;
+  padding-right: 140px;
+  
 }
 
 .section-left {
-  outline: 5px solid rgba(4, 0, 255, 0.7);
-  outline-offset: -5px;
+  
+  
+  margin-right: 140px;
 }
 
 .section-right {
-  outline: 5px solid rgba(0, 255, 13, 0.7);
-  outline-offset: -5px;
-  padding: 0 100px;
+  
+  padding-left: 140px;
+  
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .layout-field {
@@ -1069,6 +1091,8 @@ a {
   justify-content: end;
   width: 759px;
   height: 30px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .layout-field div:first-child {
@@ -1087,6 +1111,10 @@ a {
   vertical-align: center;
   text-align: left;
   text-transform: uppercase;
+}
+
+.price-legend {
+  padding-top: 2px;
 }
 
 .rank {
@@ -1375,7 +1403,8 @@ a {
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
-  width: 899px;
+  width: 760px;
+  padding-left: 0;
   
   
 }
@@ -1388,8 +1417,14 @@ a {
   margin-bottom: 31px;
 }
 
+.sample > li:nth-child(2n) {
+  margin-right: 0;
+} 
+
+
+
 .wrapper-for-legend {
   margin-right: 266px;
-  padding-left: 80px;
+  
   
 }
