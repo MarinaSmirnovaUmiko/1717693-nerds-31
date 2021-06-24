@@ -72,8 +72,7 @@
 
   .main-header {
     
-    outline: 5px solid rgba(0, 255, 0, 0.7);
-    outline-offset: -5px;
+    
     display: grid;
     grid-template-rows: 1fr 431px;
     grid-template-columns: 1/-1;
@@ -82,8 +81,6 @@
 
   .main-header-logo {
 
-    outline: 5px solid rgba(255, 0, 0, 0.3);
-    outline-offset: -5px;
     justify-self: center;
     
   }
@@ -148,8 +145,7 @@
     padding-top: auto;
     padding-bottom: auto;
     list-style: none;
-    outline: 5px solid rgba(238, 255, 0, 0.3);
-    outline-offset: -5px;
+    
     display: flex;
     flex-wrap: wrap;
     min-height: 70px;
@@ -163,11 +159,7 @@
 
   
 
-  .cart-navigation {
-
-    outline: 5px solid rgba(255, 0, 255, 0.3);
-    outline-offset: -5px;
-  }
+  
 
   .site-navigation-current a:not([href]) {
     background-color: var(--basic-white);
@@ -204,7 +196,7 @@
 
 .cart-navigation {
   max-width: 140px;
-  outline: 5px solid #ff0000;
+  
 }
 
 .cart-navigation .cart-link {
@@ -241,8 +233,7 @@
 
   text-align: left;
   vertical-align: center;
-  outline: 5px solid rgba(47, 0, 255, 0.3);
-  outline-offset: -5px;
+  
   width: 1157px;
   height: 431px;
   margin: 0 auto;
@@ -291,8 +282,7 @@
     background-image: url("../img/line1.png");
     background-position: bottom;
     background-repeat: no-repeat;
-    outline: 5px solid rgba(255, 0, 0, 0.3);
-    outline-offset: -5px;
+    
 }
 
 .prod-img {
@@ -315,8 +305,7 @@
 }
 .prod-item {
   text-align: left;
-  outline: 5px solid rgba(217, 255, 0, 0.3);
-    outline-offset: -5px;
+  
 }
 
 .prod-item h3 {
@@ -340,12 +329,12 @@
 /*Introduction*/
 
 .container2 {
-  display: grid;
-  grid-template-columns: 651px 360px;
-  column-gap: 149px;
+  display: flex;
+  justify-content: space-between;
+  width: 1011px;
 
   
-  margin-right: 140px;
+  
  
   
   
@@ -355,8 +344,8 @@
 .intro { 
   text-align: left;
   vertical-align: center;
-  outline: 5px solid rgba(0, 255, 34, 0.3);
-  outline-offset: -5px;
+  
+  padding-right: 74px;
 }
 
 .intro h2 {
@@ -391,9 +380,8 @@
 /*Statistics*/
 
 .stat {
-  outline: 5px solid rgba(0, 255, 242, 0.3);
-  outline-offset: -5px;
   
+  padding-left: 75px;
 }
 
 .stat-list {
@@ -525,8 +513,7 @@
 
 .main-footer {
 
-  outline: 5px solid rgba(255, 0, 0, 0.7);
-  outline-offset: -5px;
+  
   margin: 0;
   padding: 0;
   display: grid;
@@ -606,8 +593,7 @@
   width: 1060px;
   margin: 0 auto;
   padding: 0 10px;
-  outline: 5px solid rgba(255, 0, 21, 0.3);
-  outline-offset: -5px;
+  
   margin-bottom: 80px;
   display: flex;
   justify-content: space-between;
@@ -1424,7 +1410,12 @@ a {
 
 
 .wrapper-for-legend {
-  margin-right: 266px;
+  margin-right: 239px;
   
   
+}
+
+.wrapper-for-sortsorter {
+  display: flex;
+ 
 }
