@@ -186,8 +186,14 @@
   opacity: 0.3;
 }
 
+.site-navigation a:visited,
+.cart-navigation a:visited {
+  border-bottom: 2px solid var(--basic-pink);
+}
+
+
 .container {
-  width: 940px;
+  width: 1158px;
   margin-top: 0;
   margin-bottom: 0;
   /**margin-left: 240px;
