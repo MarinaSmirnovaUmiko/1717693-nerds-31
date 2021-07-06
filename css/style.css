@@ -200,7 +200,7 @@
   opacity: 0.3;
 }
 
-.site-navigation a:active,
+.site-navigation a:visited,
 .cart-navigation a:visited {
   background-color: var(--special-pink);
   position: absolute;
