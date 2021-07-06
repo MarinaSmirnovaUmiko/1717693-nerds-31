@@ -196,18 +196,22 @@
 
 .site-navigation a:active,
 .cart-navigation a:active {
+  
   color: var(--basic-black);
   opacity: 0.3;
+  
 }
 
-.site-navigation a:visited,
-.cart-navigation a:visited {
-  background-color: var(--special-pink);
+.site-navigation a:active::after,
+.cart-navigation a:active::after {
+  background-image: url("../img/red-palka.svg");
   position: absolute;
-  
+  top: 63px;
+  left: 25px;
   height: 2px;
   width: 73px;
   content: "";
+  
 }
 
 
@@ -414,7 +418,7 @@
   
   margin-top: 490px;
   
-  right: 200px;
+  right: 50px;
   
   
   
