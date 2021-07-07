@@ -67,14 +67,14 @@
                     от <input type="number" name="min-price" value="0">
                   </label>
                   <label class="max-price">
-                    до <input type="number" name="max-price" value="15000">
+                    до <input type="number" name="max-price" value="150 000">
                   </label>
                 </div>
               </div>
             </fieldset>
-                  <fieldset class="field1 field">
-                    <legend class="legend1 legend">Сетка:</legend>
-                    <ul class="filter-list1 filter-list">
+                  <fieldset class="field-radio field">
+                    <legend class="legend-radio legend">Сетка:</legend>
+                    <ul class="filter-list-radio filter-list">
                         <li class="filter-option filter-radio styles">
                             <input class="visually-hidden filter-input-radio filter-input" type="radio" name="product-group" value="adaptive" id="filter-adaptive" checked>
                             <label for="filter-adaptive">Адаптивная</label>
@@ -89,9 +89,9 @@
                           </li>
                     </ul>
                   </fieldset>
-                  <fieldset class="field2 field">
+                  <fieldset class="field-checkbox field">
                     <legend class="legend">Особенности:</legend>
-                    <ul class="filter-list2 filter-list">
+                    <ul class="filter-list-checkbox filter-list">
                       <li class="filter-option filter-checkbox styles">
                           <input class="filter-input-checkbox filter-input visually-hidden" type="checkbox" name="slider" id="filter-slider" checked>
                          <label for="filter-slider">Слайдер</label>
@@ -113,32 +113,32 @@
         </section>
         <section class="section-right">
           <h2 class="visually-hidden" id="clients">Список готовых шаблонов</h2>
-          <form class="sorter1">
+          <form class="sorter-price">
             <fieldset class="field layout-field">
               
                 <div class="wrapper-for-legend"><legend class="legend">Сортировать:</legend></div>
                 <div class="wrapper-for-filter">
                   <ul class="filter-list filter-list-layout">
                     <li>
-                      <input class="buttonsort" type="button" value="ПО ЦЕНЕ">
+                      <a class="buttonsort" href="#">ПО ЦЕНЕ</a>
                     </li>
                     <li>
-                      <input class="buttonsort" type="button" value="ПО ТИПУ">
+                      <a class="buttonsort" href="#">ПО ТИПУ</a>
                     </li>
                     <li>
-                      <input class="buttonsort" type="button" value="ПО НАЗВАНИЮ">
+                      <a class="buttonsort" href="#">ПО НАЗВАНИЮ</a>
                     </li>
                   </ul>
                 </div> 
                 <div class="wrapper-for-sortsorter">
-                  <button class="button-sortsorter" href="blank.html"><svg aria-hidden="true" focusable="false" role="img" aria-label="Подсвечиваемая область сортер вверх" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <a class="button-sortsorter" href="blank.html"><svg aria-hidden="true" focusable="false" role="img" aria-label="Подсвечиваемая область сортер вверх" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.5 10L0 0H11" fill="#231F20"/>
                     </svg>
-                  </button>
-                  <button class="button-sortsorter" href="blank.html"><svg aria-hidden="true" focusable="false" role="img" aria-label="Подсвечиваемая область сортер вниз" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  </a>
+                  <a class="button-sortsorter" href="blank.html"><svg aria-hidden="true" focusable="false" role="img" aria-label="Подсвечиваемая область сортер вниз" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.5 0L0 10H11L5.5 0Z" fill="#A6A6A6"/>
                     </svg>
-                  </button>
+                  </a>
                 </div>
             </fieldset>
 
@@ -312,9 +312,9 @@
     </main>
     <footer class="main-footer">
       <section class="contacts">
-          <div class="cont1"><img class="for-img" src="img/map11.jpg" width="1440" height="416" alt="Как добраться"></div>
-          <div class="cont2"><img class="for-img" src="img/map-marker113.png" width="231" height="190" alt="В точности где"></div>
-          <div class="cont3"><h2 id="howtofind">NЁRDS DESIGN STUDIO</h2>
+          <div class="how-to-get"><img class="for-img" src="img/map11.jpg" width="1440" height="416" alt="Как добраться"></div>
+          <div class="how-to-get-exactly"><img class="for-img" src="img/map-marker113.png" width="231" height="190" alt="В точности где"></div>
+          <div class="exact-address"><h2 id="howtofind">NЁRDS DESIGN STUDIO</h2>
               <p>наб. Реки Карповки,<br>
               5 лит П, Санкт-Петербург<br><br>
                <a class="tel" href="tel:+78005558628">+7 800 555-86-28</a>
@@ -323,7 +323,7 @@
           </div>
       </section>
       <section class="footer-social">
-          <div class="wrapper1">   
+          <div class="wrapper-friends">   
 
               <h2>Давайте дружить, это выгодно!</h2>
               <p>Скидка 10% для друзей из социальных сетей.</p>
