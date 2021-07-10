@@ -25,6 +25,7 @@
     --buttonsortsorter-grey-hover: #A6A6A6;
     --buttonsortsorter-grey-active: #231F20;
     --pages-grey-disabled: #DBDBDB;
+    --background-grey: #F2F2F2;
 
 
 
@@ -42,7 +43,7 @@
     
     padding-right: 100px;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", "Arial", sans-serif;
     font-size: 14px;
     line-height: 24px;
     font-weight: 400;
@@ -474,11 +475,13 @@
 }
 
 .intro-list {
-  list-style-image: url("../img/Rectangle10.svg");
+  list-style: none;
   text-align: left;
   margin-top: 0;
   padding-left: 35px;
 }
+
+
 .intro-features {
 
   
@@ -489,7 +492,19 @@
   font-weight: 400;
   margin-right: 20px;
   margin: 22px auto;
-  
+  position: relative;
+
+}
+
+.intro-features::before {
+  background-image: url("../img/rectangle10.svg");
+  height: 2px;
+  width: 25px;
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -35px;
+
 
 }
 
@@ -600,7 +615,7 @@
 
 }
 
-.clientZ {
+.clients {
 
   
   
@@ -613,37 +628,25 @@
  
 }
 
-.clientZ rect:hover {
+.clients rect:hover {
   opacity: unset;
 }
 
-.clientZ g:hover {
+.clients g:hover {
   opacity: unset;
 }
 
-.clientZ rect:active {
+.clients rect:active {
   opacity: 0.1;
 }
 
-.clientZ g:active {
+.clients g:active {
   opacity: 0.1;
 }
 
-/**.clientZ::before {
-  background-image: url("../img/line1.png");
-  position: absolute;
-  
-  height: 2px;
-  width: 1158px;
-  content: "";
-  transform: rotate(180deg);
-  left: 140px;
-  
-  
-  
-}**/
 
-.clientZ::after {
+
+.clients::after {
   background-image: url("../img/line2.png");
   position: absolute;
   
@@ -660,7 +663,7 @@
 
 
 
-.clientZ-visualization::after {
+.clients-visualization::after {
   position: absolute;
   width: 2px;
   height: 52px;
@@ -671,20 +674,20 @@
   
 }
 
-.clientZ-visualization {
+.clients-visualization {
   margin-left: 30px;
 }
 
-.clientZ-visualization:nth-child(1) {
+.clients-visualization:nth-child(1) {
   margin-top: 20px;
 }
 
-.clientZ-visualization:nth-child(3) {
+.clients-visualization:nth-child(3) {
   margin-top: 20px;
   margin-left: 60px;
 }
 
-.clientZ-visualization:nth-child(4) {
+.clients-visualization:nth-child(4) {
   margin-left: 75px;
   margin-top: 8px;
 }
@@ -808,7 +811,7 @@
   
 }
 
-.svg-img li button {
+.svg-img button {
   border: none;
   background-color: transparent;
   padding: 0;
@@ -1262,6 +1265,13 @@ a {
   background: #f1f1f1;
   font-family: inherit;
   font-size: inherit;
+  -moz-appearance: textfield;
+
+}
+
+.price-controls input:hover,
+.price-controls input:focus {
+  -moz-appearance: number-input;
 }
 
 .page-catalog {
@@ -1315,6 +1325,8 @@ a {
   vertical-align: center;
   text-align: left;
   text-transform: uppercase;
+  margin-top: 0;
+  
 }
 
 .price-legend {
@@ -1375,7 +1387,7 @@ a {
 .filter-list-layout {
   display: flex;
   flex-wrap: wrap;
-  
+  justify-content: space-between;
   width: 272px;
   height: 18px;
   margin-right: 25px;
@@ -1384,14 +1396,7 @@ a {
   margin-top: 0;
 }
 
-.filter-list-layout > li {
-  margin-right: 5px;
-}
 
-.filter-list-layout > li:nth-child(3) {
-  margin-right: none;
-  
-}
 
 
 .filter-option {
@@ -1419,10 +1424,11 @@ a {
   position: absolute;
   left: -42px;
   top: 0;
-  width: 25px;
-  height: 25px;
+  width: 23px;
+  height: 23px;
   border: 2px solid var(--checkbox-grey);
   opacity: 0.4;
+  border-radius: 20%;
 }
 
 .filter-input-checkbox:checked + label::after {
@@ -1487,6 +1493,9 @@ a {
   padding-left: 88px;
   padding-top: 17px;
   padding-bottom: 15px;
+  border: none;
+  outline: 0;
+  box-shadow: none;
 }
 
 .show-button:hover {
@@ -1538,6 +1547,10 @@ a {
 
 }
 
+.buttonsort {
+  color: var(--basic-black);
+}
+
 .filter-list .buttonsort:hover {
   opacity: 0.6;
 }
@@ -1568,9 +1581,12 @@ a {
  opacity: unset;
 }
 
+
+
 .semples {
   position: relative;
   width: 360px;
+  
 }
 
 .semples,
@@ -1613,6 +1629,8 @@ a {
   color: var(--basic-black);
   opacity: 0.3;
 }
+
+
 
 .sample-modal {
   background-color: var(--basic-light-grey);
@@ -1745,5 +1763,9 @@ a {
 
 .sorter-price {
   margin-bottom: 35px;
+}
+
+.for-sample-wrapper {
+  margin-top: -5px;
 }
 
